@@ -1,0 +1,46 @@
+block variables
+
+include _config 
+
+<!DOCTYPE html>
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title #{title}
+
+  block meta
+    include _commonMeta
+  
+  block css
+
+    if(defaultCss)
+      each val in defaultCss
+        link(rel="stylesheet", href=""+ val )
+
+    each val in cssList
+      link(rel="stylesheet", href=""+ val )
+
+    
+body
+ 
+
+  block main
+    h1 #{projectName}
+
+
+  block js
+    
+    -if(hasJquery){
+
+      script(src= assets_dir + "vendor/jquery-2.1.1.min.js")
+
+    -}
+
+
+    if(defaultJs)
+      each val in defaultJs
+        script(src=""+ val)
+
+   
+    each val in jsList
+      script(src=""+val)

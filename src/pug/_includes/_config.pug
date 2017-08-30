@@ -1,0 +1,68 @@
+//- 
+  this file contains some global variables like project name , base url etc . and some functions also
+  will be execured before _master.pug(included in the 1st line).
+
+//- variables 
+
+-var projectName = 'Jayakrishnancn'
+-var projectDesc = 'Personal Portfolio'
+
+-var base_url = '/'
+
+-var public_root = '/'
+
+-var assets_dir = base_url + 'assets/'
+
+//- assets 
+-var defaultCss = [assets_dir + 'css/app.css']
+-var defaultJs = [ assets_dir + "js/scripts.min.js"]
+
+//- check if title is already defined
+-if (typeof(title) == 'undefined'){
+
+-var title = projectName
+
+-}
+
+ 
+
+-if (typeof(cssList) == 'undefined'){
+
+-var cssList = [];
+
+-}
+
+
+
+-if (typeof(jsList) == 'undefined'){
+
+-var jsList = [];
+
+-}
+
+-if (typeof(pugList) == 'undefined'){
+
+-var pugList = [];
+
+-}
+
+
+
+-if (typeof(hasJquery) == 'undefined'){
+
+-var hasJquery = false;
+
+-}
+
+-if (typeof(hasCssFramework_Css) == 'undefined'){
+
+-var hasCssFramework_Css = false;
+
+-}
+
+-if (typeof(hasCssFramework_Js) == 'undefined'){
+
+-var hasCssFramework_Js = false;
+
+-}
+
